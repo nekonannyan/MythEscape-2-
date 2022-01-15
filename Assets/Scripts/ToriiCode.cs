@@ -7,13 +7,13 @@ using UnityEngine.UI;
 
 public class ToriiCode : MonoBehaviour
 {
-    bool count1 = false;//
-    bool count2 = false;//
-    bool count3 = false;//
-    bool count4 = false;//
-    bool count5 = false;//
+    bool count1 = false;
+    bool count2 = false;
+    bool count3 = false;
+    bool count4 = false;
+    bool count5 = false;
 
-    bool onetime = false;//
+    bool onetime = false;//ˆê‰ñ‚¾‚¯s‚¤
 
     //ƒ{ƒ^ƒ“‚P
     public void Code1()

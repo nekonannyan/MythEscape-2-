@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class PlayerItems : MonoBehaviour
 {
+    void OnItem()
+    {
 
+    }
 }
