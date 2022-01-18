@@ -10,16 +10,16 @@ public class Slot : MonoBehaviour
     [SerializeField]
     private Image itemImage;
 
-    public Item MyItem { get => item;}
+    public Item MyItem { get => item; }
     private int index;
-    
+
     public void Init(int index)
     {
         this.index = index;
     }
     public void OnItemBox()
     {
-        Debug.Log("クリック"+index);
+        Debug.Log("スロットの" + index);
     }
     public void SetItem(Item item)
     {
@@ -29,6 +29,7 @@ public class Slot : MonoBehaviour
         {
             itemImage.sprite = this.item.MyItemImage;
             itemImage.color = new Color(1, 1, 1, 1);
+
         }
         else
         {

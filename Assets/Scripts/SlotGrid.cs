@@ -11,13 +11,15 @@ public class SlotGrid : MonoBehaviour
 
     private int slotNumber = 5;
 
+
     void Start()
     {
         for (int i = 0; i < slotNumber; i++)
         {
             GameObject slotObj = Instantiate(slotPrefad, this.transform);
             Slot slot = slotObj.GetComponent<Slot>();
-            slot.Init(i+1);
+            slot.Init(i + 1);
+
             if (i < allTtems.Length)
             {
                 slot.SetItem(allTtems[i]);
