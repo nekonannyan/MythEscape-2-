@@ -7,28 +7,29 @@ public class SlotGrid : MonoBehaviour
     [SerializeField]
     private GameObject slotPrefad;
     [SerializeField]
-    private Item[] allTtems;
+    public Item[] allItems;
 
-    private int slotNumber = 5;
+    private int slotNumber = 5;//スロットの数
 
 
     void Start()
     {
+        //スロットを作る
         for (int i = 0; i < slotNumber; i++)
         {
             GameObject slotObj = Instantiate(slotPrefad, this.transform);
             Slot slot = slotObj.GetComponent<Slot>();
             slot.Init(i + 1);
-
-            if (i < allTtems.Length)
+            
+            //スロットにアイテムをセット
+            if (i < allItems.Length)
             {
-                slot.SetItem(allTtems[i]);
+                slot.SetItem(allItems[i]);
             }
             else
             {
                 slot.SetItem(null);
             }
         }
-
     }
 }

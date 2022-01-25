@@ -90,7 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddddebf446afc9544a5c3f4dbfaff362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotGridPrefad: {fileID: 6495890428223124747, guid: b8eb057acd816a04a97346dd9605960f, type: 3}
   itemImage: {fileID: 6170095062564017631}
+  bigItemImage: {fileID: 0}
 --- !u!114 &3683671763240119603
 MonoBehaviour:
   m_ObjectHideFlags: 0
