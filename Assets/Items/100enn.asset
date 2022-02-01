@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "100\u5186"
   itemImage: {fileID: 21300000, guid: be3a44526d355d440aaa350fda1a9f78, type: 3}
+  bigItemImage: {fileID: 21300000, guid: be3a44526d355d440aaa350fda1a9f78, type: 3}

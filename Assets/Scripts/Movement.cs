@@ -12,70 +12,70 @@ public class Movement : MonoBehaviour
 
     //private int Expansion = 1500;
     //Y�̈ʒu
-    private int PositionY = 0;
+    private int PositionX = 0;
     //X�̈ʒu
-    private int PositionX = 1500;
+    private int PositionY = 1500;
 
 
     public void OnRightArrow()
     {
-        if (PositionX == -1500 || PositionX == 1500)
+        if (PositionY == -1500 || PositionY == 1500)
         {
             return;
         }
 
-        if (PositionY == RightMax)
+        if (PositionX == RightMax)
         {
-            PositionY = LeftMax;
-            this.transform.localPosition = new Vector2(PositionY, PositionX);
+            PositionX = LeftMax;
+            this.transform.localPosition = new Vector2(PositionX, PositionY);
         }
 
         else
         {
-            PositionY = PositionY - 1000;
-            this.transform.localPosition = new Vector2(PositionY, PositionX);
+            PositionX -= 1000;
+            this.transform.localPosition = new Vector2(PositionX, PositionY);
         }
     }
 
     public void OnLeftArrow()
     {
-        if (PositionX == -1500 || PositionX == 1500)
+        if (PositionY == -1500 || PositionY == 1500)
         {
             return;
         }
 
-        if (PositionY == LeftMax)
+        if (PositionX == LeftMax)
         {
-            PositionY = RightMax;
-            this.transform.localPosition = new Vector2(PositionY, PositionX);
+            PositionX = RightMax;
+            this.transform.localPosition = new Vector2(PositionX, PositionY);
         }
         else
         {
-            PositionY = PositionY + 1000;
-            this.transform.localPosition = new Vector2(PositionY, PositionX);
+            PositionX += 1000;
+            this.transform.localPosition = new Vector2(PositionX, PositionY);
         }
     }
 
     public void OnFrontArrow()
     {
-        PositionX = PositionX - 3000;
-        this.transform.localPosition = new Vector2(PositionY, PositionX);
+        PositionY -= 3000;
+        this.transform.localPosition = new Vector2(PositionX, PositionY);
     }
     public void OnDown()
     {
-        PositionX = PositionX + 1500;
-        this.transform.localPosition = new Vector2(PositionY, PositionX);
+        PositionY += 1500;
+        this.transform.localPosition = new Vector2(PositionX, PositionY);
     }
     public void OnUp()
     {
-        PositionX = PositionX - 1500;
-        this.transform.localPosition = new Vector2(PositionY, PositionX);
+        PositionY -= 1500;
+        this.transform.localPosition = new Vector2(PositionX, PositionY);
     }
 
     public void OnBackArrow()
     {
-        PositionX = PositionX + 3000;
-        this.transform.localPosition = new Vector2(PositionY, PositionX);
+        PositionY += 3000;
+        this.transform.localPosition = new Vector2(PositionX, PositionY);
 
     }
 }

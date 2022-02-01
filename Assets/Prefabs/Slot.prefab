@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotGridPrefad: {fileID: 6495890428223124747, guid: b8eb057acd816a04a97346dd9605960f, type: 3}
   itemImage: {fileID: 6170095062564017631}
-  bigItemImage: {fileID: 0}
+  bigItemImage: {fileID: 8323743026647257892, guid: fb274f13acb5d8c49b7f5cf84fdf3dfc, type: 3}
 --- !u!114 &3683671763240119603
 MonoBehaviour:
   m_ObjectHideFlags: 0

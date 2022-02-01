@@ -9,9 +9,10 @@ public class Item : ScriptableObject
     private string itemName;
     [SerializeField]
     private Sprite itemImage;
-
+    [SerializeField]
+    private Sprite bigItemImage;
 
     public string MyItemName { get => itemName; }
     public Sprite MyItemImage { get => itemImage; }
-
+    public Sprite MyBigItemImage { get => bigItemImage; }
 }

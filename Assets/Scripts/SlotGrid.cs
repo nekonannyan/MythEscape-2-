@@ -10,17 +10,18 @@ public class SlotGrid : MonoBehaviour
     public Item[] allItems;
 
     private int slotNumber = 5;//スロットの数
-
+    private List<Slot> slotList = new List<Slot>();
 
     void Start()
     {
         //スロットを作る
         for (int i = 0; i < slotNumber; i++)
         {
-            GameObject slotObj = Instantiate(slotPrefad, this.transform);
-            Slot slot = slotObj.GetComponent<Slot>();
+            var slotObj = Instantiate(slotPrefad, this.transform);
+            var slot = slotObj.GetComponent<Slot>();
             slot.Init(i + 1);
-            
+            slot.OnTap = OnSlot;
+
             //スロットにアイテムをセット
             if (i < allItems.Length)
             {
@@ -30,6 +31,13 @@ public class SlotGrid : MonoBehaviour
             {
                 slot.SetItem(null);
             }
+
+            slotList.Add(slot);
         }
+    }
+
+    public void OnSlot(Slot slot)
+    {
+        slot?.OnSelect();
     }
 }

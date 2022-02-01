@@ -15,23 +15,34 @@ public class Slot : MonoBehaviour
     [SerializeField]
     private Image bigItemImage = null;
 
+
     public Item Item { get => item; }
     private int index;
 
+    private int clickCount = 0;
 
+    public System.Action<Slot> OnTap;
 
     public void Init(int index)
     {
         this.index = index;
+        //gameObject.GetComponent<Button>().onClick.AddListener(OnItemBox);
     }
-    public void OnItemBox()
-    {    
-        SlotGrid slotGrid = GameObject.Find("SlotGrid").GetComponent<SlotGrid>();
 
-        if (slotGrid.allItems[index] != null)
+    public void OnItemBox()
+    {
+        this.OnTap?.Invoke(this);
+    }
+
+    public void OnSelect()
+    {
+        
+        if (this.item != null)
         {
-            bigItemImage.sprite = slotGrid.allItems[index].MyItemImage;
-            itemImage.color = new Color(1, 1, 1, 1);
+            bigItemImage.gameObject.SetActive(true);
+            bigItemImage.sprite = this.item.MyBigItemImage;
+            itemImage.color = Color.gray;
+            clickCount += 1;
         }
         else
         {
@@ -39,9 +50,8 @@ public class Slot : MonoBehaviour
         }
 
         Debug.Log("スロットの" + index);
-
-        
     }
+
     public void SetItem(Item item)
     {
         this.item = item;//画像を表示
@@ -50,11 +60,15 @@ public class Slot : MonoBehaviour
         {
             itemImage.sprite = this.item.MyItemImage;
             itemImage.color = new Color(1, 1, 1, 1);
-
         }
         else
         {
             itemImage.color = new Color(0, 0, 0, 0);
         }
+    }
+
+    private void OnDestroy()
+    {
+        this.OnTap = null;
     }
 }
