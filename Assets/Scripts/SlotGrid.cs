@@ -7,13 +7,16 @@ public class SlotGrid : MonoBehaviour
     [SerializeField]
     private GameObject slotPrefad;
     [SerializeField]
-    public Item[] allItems;
+    private Item[] allItems;
+
+    private ItemData itemData;
 
     private int slotNumber = 5;//スロットの数
     private List<Slot> slotList = new List<Slot>();
 
     void Start()
     {
+
         //スロットを作る
         for (int i = 0; i < slotNumber; i++)
         {

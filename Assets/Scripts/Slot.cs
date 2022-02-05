@@ -42,12 +42,13 @@ public class Slot : MonoBehaviour
             bigItemImage.gameObject.SetActive(true);
             bigItemImage.sprite = this.item.MyBigItemImage;
             itemImage.color = Color.gray;
-            clickCount += 1;
+            clickCount ++;
         }
         else
         {
             itemImage.color = new Color(0, 0, 0, 0);
         }
+
 
         Debug.Log("ÉXÉçÉbÉgÇÃ" + index);
     }
