@@ -15,8 +15,6 @@ public class Slot : MonoBehaviour
     [SerializeField]
     private Image bigItemImage = null;
 
-    private  int clickCount = 0;
-
     public Item Item { get => item; }
     private int index;
 
@@ -35,7 +33,6 @@ public class Slot : MonoBehaviour
 
     public void OnSelect()
     {
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("slot");
         if (this.item != null && itemImage.color == Color.gray)
         {
             bigItemImage.gameObject.SetActive(true);
@@ -43,17 +40,16 @@ public class Slot : MonoBehaviour
         }
         else if(this.item != null)
         {
-            
-            itemImage.color = new Color(0, 0, 0, 0);
+
+            itemImage.color = Color.clear;
             bigItemImage.gameObject.SetActive(false);
             itemImage.color = Color.gray;
         }
-        else
+        else       
         {
-            itemImage.color = new Color(0, 0, 0, 0);
+            itemImage.color = Color.clear;
         }
 
-        clickCount = index;
         Debug.Log("ÉXÉçÉbÉgÇÃ" + index);
     }
 
@@ -64,11 +60,11 @@ public class Slot : MonoBehaviour
         if (this.item != null)
         {
             itemImage.sprite = this.item.MyItemImage;
-            itemImage.color = new Color(1, 1, 1, 1);
+            itemImage.color = Color.white;
         }
         else
         {
-            itemImage.color = new Color(0, 0, 0, 0);
+            itemImage.color = Color.clear;
         }
     }
 

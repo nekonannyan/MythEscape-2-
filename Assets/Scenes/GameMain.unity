@@ -5797,9 +5797,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8323743026647257892, guid: fb274f13acb5d8c49b7f5cf84fdf3dfc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8722609517398526638, guid: fb274f13acb5d8c49b7f5cf84fdf3dfc, type: 3}
       propertyPath: m_Name
-      value: BigItemBackGround
+      value: BigItem
       objectReference: {fileID: 0}
     - target: {fileID: 8722609517398526638, guid: fb274f13acb5d8c49b7f5cf84fdf3dfc, type: 3}
       propertyPath: m_IsActive
