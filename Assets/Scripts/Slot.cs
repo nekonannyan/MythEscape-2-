@@ -15,11 +15,10 @@ public class Slot : MonoBehaviour
     [SerializeField]
     private Image bigItemImage = null;
 
+    private  int clickCount = 0;
 
     public Item Item { get => item; }
     private int index;
-
-    private int clickCount = 0;
 
     public System.Action<Slot> OnTap;
 
@@ -36,20 +35,25 @@ public class Slot : MonoBehaviour
 
     public void OnSelect()
     {
-        
-        if (this.item != null)
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("slot");
+        if (this.item != null && itemImage.color == Color.gray)
         {
             bigItemImage.gameObject.SetActive(true);
             bigItemImage.sprite = this.item.MyBigItemImage;
+        }
+        else if(this.item != null)
+        {
+            
+            itemImage.color = new Color(0, 0, 0, 0);
+            bigItemImage.gameObject.SetActive(false);
             itemImage.color = Color.gray;
-            clickCount ++;
         }
         else
         {
             itemImage.color = new Color(0, 0, 0, 0);
         }
 
-
+        clickCount = index;
         Debug.Log("ÉXÉçÉbÉgÇÃ" + index);
     }
 

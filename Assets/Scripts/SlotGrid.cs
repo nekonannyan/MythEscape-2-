@@ -9,10 +9,12 @@ public class SlotGrid : MonoBehaviour
     [SerializeField]
     private Item[] allItems;
 
+
     private ItemData itemData;
 
     private int slotNumber = 5;//ÉXÉçÉbÉgÇÃêî
     private List<Slot> slotList = new List<Slot>();
+
 
     void Start()
     {
@@ -41,6 +43,8 @@ public class SlotGrid : MonoBehaviour
 
     public void OnSlot(Slot slot)
     {
+
         slot?.OnSelect();
     }
+
 }
