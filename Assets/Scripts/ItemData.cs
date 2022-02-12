@@ -20,7 +20,7 @@ public class ItemData : ScriptableObject
     [SerializeField]
     private List<ItemModel> itemList;
     
-        public ItemModel GetItem(string name)
+    public ItemModel GetItem(string name)
     {
         for (int i = 0; i < itemList.Count; i++)
         {

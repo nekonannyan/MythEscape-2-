@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemManager : MonoBehaviour
+public class GetItem : MonoBehaviour
 {
+    //[SerializeField]
+    //ItemType.Type item;
     [SerializeField]
-    private Item[] allitem;
-
+    ItemType item;
 
     public void OnClickObj()
     {
-        //allitem‚Ì’†‚É“ü‚é
-                                            
+        ItemBox.instance.SetItem(item);
         //ƒNƒŠƒbƒN‚µ‚½‚çÁ‚¦‚é
         gameObject.SetActive(false);
     }
