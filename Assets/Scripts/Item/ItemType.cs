@@ -7,8 +7,8 @@ public class ItemType
     //Ží—Þ‚Ì—ñ‹“
     public enum Type
     {
-        Cube,
-        Ball,
+        Pencil,
+        Omikuzi,
     }
 
     public Type type;       //Ží—Þ

@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 294513192}
   - component: {fileID: 294513191}
   m_Layer: 5
-  m_Name: Item boll
+  m_Name: Item Omikuzi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 751506662ba5b8044b5dd06a258a7d59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4254,7 +4254,7 @@ GameObject:
   - component: {fileID: 1366005734}
   - component: {fileID: 1366005737}
   m_Layer: 5
-  m_Name: Item cube
+  m_Name: Item Pencil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4314,7 +4314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4003cd7812cb52045b00fa295b14e851, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
