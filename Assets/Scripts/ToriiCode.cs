@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ToriiCode : MonoBehaviour
 {
-    private int[] code = {3,2,3,3,1};
+    private int[] code = { 3, 2, 3, 3, 1 };
     private int count = 0;
     private bool onetime = false;
 

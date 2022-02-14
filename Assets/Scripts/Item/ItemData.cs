@@ -11,15 +11,15 @@ public class ItemData : ScriptableObject
         public Sprite image;
         public bool isBigItem;
         public GameObject upPrefab;
-        
+
         public static ItemModel Dummy() => new ItemModel();
-        
+
         public bool IsEmpty => string.IsNullOrEmpty(name);
     }
-    
+
     [SerializeField]
     private List<ItemModel> itemList;
-    
+
     public ItemModel GetItem(string name)
     {
         for (int i = 0; i < itemList.Count; i++)

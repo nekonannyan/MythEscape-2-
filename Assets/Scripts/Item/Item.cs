@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class ItemType
+public class Item
 {
     //Ží—Þ‚Ì—ñ‹“
     public enum Type

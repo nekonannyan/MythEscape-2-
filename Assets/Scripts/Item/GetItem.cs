@@ -7,7 +7,7 @@ public class GetItem : MonoBehaviour
     //[SerializeField]
     //ItemType.Type item;
     [SerializeField]
-    ItemType item;
+    Item item;
 
     public void OnClickObj()
     {

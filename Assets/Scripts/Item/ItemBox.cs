@@ -9,15 +9,22 @@ public class ItemBox : MonoBehaviour
     public static ItemBox instance;
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
     }
     //スロットにアイテムを入れる
-    public void SetItem(ItemType item)
+    public void SetItem(Item item)
     {
-        slots[0].SetItem(item);
-       // Debug.Log("Set");
+        //アイテムを左寄せで入れる
+        foreach (Slot slot in slots)
+        {
+            if (slot.IsEmpty())
+            {
+                slot.SetItem(item);
+                break;
+            }
+        }
     }
 }
