@@ -13,11 +13,8 @@ MonoBehaviour:
   m_Name: ItemData
   m_EditorClassIdentifier: 
   itemList:
-  - name: item_001
-    image: {fileID: 21300000, guid: be3a44526d355d440aaa350fda1a9f78, type: 3}
-    isBigItem: 0
-    upPrefab: {fileID: 8722609517398526638, guid: fb274f13acb5d8c49b7f5cf84fdf3dfc, type: 3}
   - name: 
+    id: 
     image: {fileID: 0}
     isBigItem: 0
     upPrefab: {fileID: 0}

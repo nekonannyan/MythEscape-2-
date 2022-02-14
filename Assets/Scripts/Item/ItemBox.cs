@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ItemBox : MonoBehaviour
 {
-    [SerializeField] Slot[] slots;
+    [SerializeField] Slot[] slots ;
+    [SerializeField] Slot selectedSlot = null;
+
     //どこでも実行出来るようにする
     public static ItemBox instance;
     private void Awake()
@@ -14,6 +16,7 @@ public class ItemBox : MonoBehaviour
             instance = this;
         }
     }
+
     //スロットにアイテムを入れる
     public void SetItem(Item item)
     {
@@ -25,6 +28,18 @@ public class ItemBox : MonoBehaviour
                 slot.SetItem(item);
                 break;
             }
+        }
+    }
+
+    public void OnSelectSlot(int position)
+    {
+        foreach(Slot slot in slots)
+        {
+            slot.HideBgPanel();
+        }
+        if(slots[position].OnSelected())
+        {
+            selectedSlot = slots[position];
         }
     }
 }

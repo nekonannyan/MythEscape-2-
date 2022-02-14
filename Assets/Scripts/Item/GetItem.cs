@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GetItem : MonoBehaviour
 {
-    //[SerializeField]
-    //ItemType.Type item;
     [SerializeField]
-    Item item;
+    Item.Type itemType;
 
+    Item item;
+    private void Start()
+    {
+        item = ItemGenerater.instance.Spawn(itemType);
+    }
     public void OnClickObj()
     {
         ItemBox.instance.SetItem(item);

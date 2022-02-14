@@ -9,8 +9,15 @@ public class Item
     {
         Pencil,
         Omikuzi,
+        Matti,
     }
 
     public Type type;       //Ží—Þ
     public Sprite sprite;   //‰æ‘œ
+    
+    public Item(Type type, Sprite sprite)
+    {
+        this.type = type;
+        this.sprite = sprite;
+    }
 }

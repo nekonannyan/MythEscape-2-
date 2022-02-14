@@ -4,10 +4,14 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Items/ItemData")]
 public class ItemData : ScriptableObject
 {
+
     [System.Serializable]
+
     public class ItemModel
     {
+        
         public string name;
+        public Item id;
         public Sprite image;
         public bool isBigItem;
         public GameObject upPrefab;
@@ -20,16 +24,16 @@ public class ItemData : ScriptableObject
     [SerializeField]
     private List<ItemModel> itemList;
 
-    public ItemModel GetItem(string name)
-    {
-        for (int i = 0; i < itemList.Count; i++)
-        {
-            var item = itemList[i];
-            if (item.name == name)
-            {
-                return item;
-            }
-        }
-        return ItemModel.Dummy();
-    }
+    //public ItemModel GetItem(Item.Type id)
+    //{
+    //    for (int i = 0; i < itemList.Count; i++)
+    //    {
+    //        Item item = itemList[i];
+    //        if (item.id == id)
+    //        {
+    //            return item;
+    //        }
+    //    }
+    //    return ItemModel.Dummy();
+    //}
 }
