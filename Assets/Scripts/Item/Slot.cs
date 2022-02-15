@@ -12,6 +12,7 @@ public class Slot : MonoBehaviour
 
     Item item = default;
 
+
     private void Awake()
     {
         image = GetComponent<Image>();
@@ -38,6 +39,11 @@ public class Slot : MonoBehaviour
         UpdateImage(item);
     }
 
+    public Item GetItem()
+    {
+        return item;
+    }
+
     //アイテムを表示
     void UpdateImage(Item item)
     {
@@ -45,6 +51,7 @@ public class Slot : MonoBehaviour
         image.sprite = item.sprite;
     }
 
+    //選択したときにアイテムの色を変える
     public bool OnSelected()
     {
         if (item == null)
@@ -55,16 +62,18 @@ public class Slot : MonoBehaviour
         return true;
     }
 
+    //色を戻す
     public void HideBgPanel()
     {
         if (item == null)
         {
             itemSlot.color = Color.clear;
-            Debug.Log("ok");
+            Debug.Log("アイテムがない所の色を戻す");
         }
         else 
         { 
-        itemSlot.color = Color.white;
+            itemSlot.color = Color.white;
+            Debug.Log("アイテムが入ってる所の選択解除");
         }
     }
 }
