@@ -7,7 +7,7 @@ public class ItemBox : MonoBehaviour
     [SerializeField] Slot[] slots;
     [SerializeField] Slot selectedSlot = null;
 
-   // bool selected = false;
+    // bool selected = false;
 
     //どこでも実行出来るようにする
     public static ItemBox instance;
@@ -35,13 +35,13 @@ public class ItemBox : MonoBehaviour
     //スロット選択時に実行する
     public void OnSelectSlot(int position)
     {
-        foreach(Slot slot in slots)
+        foreach (Slot slot in slots)
         {
             slot.HideBgPanel();
         }
 
         //選択されているアイテムをグレーにする
-        if(slots[position].OnSelected())
+        if (slots[position].OnSelected())
         {
             selectedSlot = slots[position];
         }
@@ -55,12 +55,12 @@ public class ItemBox : MonoBehaviour
     //アイテムの使用を試みる
     public bool TryUseItem(Item.Type type)
     {
-        if(selectedSlot == null)
+        if (selectedSlot == null)
         {
             return false;
         }
 
-        if(selectedSlot.GetItem().type == type)
+        if (selectedSlot.GetItem().type == type)
         {
             selectedSlot.HideBgPanel();
             selectedSlot = null;
@@ -72,7 +72,7 @@ public class ItemBox : MonoBehaviour
 
     public Item GetSelectedItem()
     {
-        if(selectedSlot == null)
+        if (selectedSlot == null)
         {
             return null;
         }

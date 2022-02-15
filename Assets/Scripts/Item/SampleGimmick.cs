@@ -12,7 +12,7 @@ public class SampleGimmick : MonoBehaviour
         Debug.Log("OnClick");
 
         bool Matti = ItemBox.instance.TryUseItem(clearItem);
-        if(Matti == true)
+        if (Matti == true)
         {
             Debug.Log("ƒMƒ~ƒbƒN‰ğœ");
             gameObject.SetActive(false);

@@ -70,8 +70,8 @@ public class Slot : MonoBehaviour
             itemSlot.color = Color.clear;
             Debug.Log("アイテムがない所の色を戻す");
         }
-        else 
-        { 
+        else
+        {
             itemSlot.color = Color.white;
             Debug.Log("アイテムが入ってる所の選択解除");
         }
