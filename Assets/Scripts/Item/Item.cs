@@ -14,10 +14,12 @@ public class Item
 
     public Type type;       //Ží—Þ
     public Sprite sprite;   //‰æ‘œ
+    public Sprite zoomImage;
 
-    public Item(Type type, Sprite sprite)
+    public Item(Type type, Sprite sprite, Sprite zoomImage)
     {
         this.type = type;
         this.sprite = sprite;
+        this.zoomImage = zoomImage;
     }
 }

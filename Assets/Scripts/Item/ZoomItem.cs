@@ -1,21 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZoomItem : MonoBehaviour
 {
     [SerializeField]
     GameObject panel = default;
+    [SerializeField]
+    Image setZoomImage = default;
 
-    //Ç«Ç±Ç≈Ç‡é¿çsèoóàÇÈÇÊÇ§Ç…Ç∑ÇÈ
-    public static ZoomItem instance;
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-    }
+    Sprite setZoom = default;
+
+
 
     public void ShowPanel()
     {

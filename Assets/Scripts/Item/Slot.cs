@@ -63,7 +63,7 @@ public class Slot : MonoBehaviour
     }
 
     //F‚ğ–ß‚·
-    public void HideBgPanel()
+    public void ColorRestore()
     {
         if (item == null)
         {

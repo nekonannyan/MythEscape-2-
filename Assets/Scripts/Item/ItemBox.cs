@@ -7,7 +7,7 @@ public class ItemBox : MonoBehaviour
     [SerializeField] Slot[] slots;
     [SerializeField] Slot selectedSlot = null;
 
-    // bool selected = false;
+    public GameObject zoomObj;
 
     //どこでも実行出来るようにする
     public static ItemBox instance;
@@ -37,20 +37,20 @@ public class ItemBox : MonoBehaviour
     {
         foreach (Slot slot in slots)
         {
-            slot.HideBgPanel();
+            slot.ColorRestore();
         }
-
+        if (selectedSlot == slots[position])
+        {
+            Debug.Log("2kai");
+            zoomObj.GetComponent<ZoomItem>().ShowPanel();
+        }
         //選択されているアイテムをグレーにする
         if (slots[position].OnSelected())
         {
             selectedSlot = slots[position];
         }
-
-        //if ( == true)
-        //{
-        //    ZoomItem.instance.ShowPanel();
-        //}
     }
+
 
     //アイテムの使用を試みる
     public bool TryUseItem(Item.Type type)
@@ -62,7 +62,8 @@ public class ItemBox : MonoBehaviour
 
         if (selectedSlot.GetItem().type == type)
         {
-            selectedSlot.HideBgPanel();
+            //selectedSlot.SetItem(null);
+            selectedSlot.ColorRestore();
             selectedSlot = null;
             return true;
         }
